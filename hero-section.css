@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.hero-section{
+    position: relative;
+    background-image: url('./pictures/hero-bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 124, 0.3); 
+    z-index: 1;
+}
+
+.hero-section .content {
+    position: relative;
+    z-index: 2;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-links{
+    display: flex;
+    margin-top: 15px;
+    gap: 2rem;
+    margin-right: -12rem;
+}
+
+.header-links > a{
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header-links > a:link{
+    color: #000000;
+    background-color: transparent;
+}
+
+.header-links > a:visited{
+    color: #000080;
+    background-color: transparent;
+}
+
+.header-links > a:hover{
+    color: blue;
+    transition: 0.5s;
+    background-color: transparent;
+}
+
+.header-links > a:active{
+    color: #0707a3;
+    background-color: transparent;
+}
+
+.header-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.header-buttons > .sign-in{
+    padding: 13px 25px; 
+    font-size: 1rem;
+    border: 1px solid #000080;
+    color: #000080;
+    background-color: transparent;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.header-buttons > .sign-in:hover{
+    background-color: #000080;
+    color:white;
+    cursor: pointer;
+}
+
+.header-buttons > .sign-up{
+    padding: 13px 25px;
+    font-size: 1rem;
+    border: 1px solid #000080;
+    color: white;
+    background-color: #000080;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.header-buttons > .sign-up:hover{
+    background-color: #000099;
+    color:white;
+    cursor: pointer;
+}
+
+.acct-icon{
+    border-radius: 50%;
+    padding: 5px 7px;
+    background-color: transparent;
+    border: 1px solid #000080;
+    transition: 0.3s;
+}
+
+.acct-icon:hover{
+    background-color: #000080;
+    cursor: pointer;
+}
+
+.search-bar {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+  
+.search-bar form {
+    position: relative;
+    z-index: 10;
+}
+  
+.search-container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+}
+  
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    font-size: 16px;
+    width: 0;
+}
+  
+.search-container div {
+    padding: 0 15px;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+}
+
+.search-container div:not(:last-of-type)::after {
+    content: "|";
+    position: absolute;
+    right: -3px;
+    color: #ccc;
+}
+  
+.search-container svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: #000080;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.search-container svg:hover {
+    background-color: #333;
+}
+
+.text-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section h1{
+    color: white;
+    margin-top: 60px;
+}
+
+.text-section h2{
+    color: white;
+    font-weight: 400;
+    margin-top: 30px;
+    width: 60%;
+}
+
+.explore-button{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.explore-button button{
+    background-color: #000080;
+    border: none;
+    padding: 13px 25px;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.explore-button button:hover{
+    background-color: #000099;
+    color: whitesmoke;
+    cursor: pointer;
+}
