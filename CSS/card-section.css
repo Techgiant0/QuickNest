@@ -1,0 +1,117 @@
+.why-quicknest-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#body-heading{
+    color: #00002d;
+}
+
+.card-section{
+    display: flex;
+    margin-top: 50px;
+}
+
+.card-section:nth-child(odd){
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+
+.left-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    height: 250px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 3rem;
+    background-color: rgb(255,215,0,0.5);
+    box-shadow: 0 2px 6px 0 rgba(173,175,244, 0.3), 0 3px 7px 0 rgba(173,175,244, 0.3)
+}
+
+.right-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    height: 250px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 3rem;
+    background-color: rgb(255,215,0,0.5);
+    box-shadow: 0 2px 6px 0 rgba(173,175,244, 0.3), 0 3px 7px 0 rgba(173,175,244, 0.3);
+}
+
+.right-card p{
+    width: 200px;
+    text-align: center;
+}
+
+.left-card p{
+    width: 210px;
+    text-align: center;
+}
+
+.card-connector{
+    position: absolute;
+    top: 120px; 
+    right: -40px;
+    width: 40px;
+    background-color: rgba(255,215,0,0.5);
+    box-shadow: 0 3px 6px 0 rgba(173,175,244, 0.3), 0 3px 6px 0 rgba(173,175,244, 0.3);
+    height: 30px;
+}
+
+.card-connector-even{
+    position: absolute;
+    top: 120px; 
+    left: -40px;
+    width: 40px;
+    background-color: rgba(255,215,0,0.5);
+    box-shadow: 0 3px 6px 0 rgba(173,175,244, 0.3), 0 3px 6px 0 rgba(173,175,244, 0.3);
+    height: 30px;
+}
+
+.left-card-image-1{
+    margin-left: 2rem;
+}
+
+#left-card-image-2{
+    margin-left: 2.5rem;
+}
+
+#left-card-image-2 img{
+    border-radius: 20px;
+    box-shadow: 0 2px 6px 0 rgba(173,175,244, 0.3), 0 3px 7px 0 rgba(173,175,244, 0.3);
+}
+
+#right-card-image-2{
+    margin-right: 2.5rem;
+}
+
+#right-card-image-2 img{
+    border-radius: 20px;
+    box-shadow: 0 2px 6px 0 rgba(173,175,244, 0.3), 0 3px 7px 0 rgba(173,175,244, 0.3);
+}
+
+#right-card-image-1{
+    margin-right: 2.5rem;
+}
+
+#right-card-image-1 img{
+    border-radius: 20px;
+    box-shadow: 0 2px 6px 0 rgba(173,175,244, 0.3), 0 3px 7px 0 rgba(173,175,244, 0.3);
+}
