@@ -13,7 +13,7 @@ body{
 
 .hero-section{
     position: relative;
-    background-image: url('./pictures/hero-bg-image.jpg');
+    background-image: url('../pictures/hero-bg-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
