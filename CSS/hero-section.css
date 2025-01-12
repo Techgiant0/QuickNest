@@ -149,8 +149,7 @@ header{
     padding: 15px 0;
     font-size: 16px;
     width: 0;
-}
-  
+}  
 .search-container div {
     padding: 0 15px;
     font-size: 16px;
@@ -223,4 +222,104 @@ header{
     background-color: #000099;
     color: whitesmoke;
     cursor: pointer;
+}
+
+@media(width <= 768px){
+    .header-links, .header-buttons{
+        display: none;
+    }
+
+    .menu-hamburger {
+        width: 50px;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 6;
+      }
+
+    .hamburger {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      
+      .hamburger-line {
+        position: absolute;
+        border-radius: 5px;
+        height: 4px;
+        width: 100%;
+        background: #000080;
+        transition: all 0.3s ease;
+      }
+      
+      .hamburger-line:nth-child(1) {
+        width: 60%;
+        top: 0;
+      }
+      
+      .hamburger-line:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .hamburger-line:nth-child(3) {
+        bottom: 0;
+        width: 60%; 
+        margin-left: 0.8rem;
+        transition: 0.3s;
+      }
+
+      .menu-hamburger:hover .hamburger-line:nth-child(3){
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .menu-hamburger:hover .hamburger-line:nth-child(1){
+        width: 100%;
+      }
+      
+      .menu-hamburger.active .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .menu-hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .menu-hamburger.active .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        width: 100%;
+      }
+
+      #mobile-menu{
+        display: flex;
+        gap: 15rem;
+      }
+
+      .search-container div{
+        display: none;
+      }
+
+      .search-container input {
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 20px;
+    }  
+
+    .text-section{
+        margin-top: -4rem;
+    }
+
+    .text-section h1{
+        width: 50%;
+        line-height: 3rem;
+    }
+
+    .text-section h2{
+        width: 70%;
+    }
 }
