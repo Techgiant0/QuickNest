@@ -92,11 +92,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const hamburger = document.querySelector('.menu-hamburger')
-const menu = document.querySelector('.menu')
+const menu = document.querySelector('#curtain-menu-mobile')
+const bar = document.querySelector('.search-bar')
+const text = document.querySelector('.text-section')
+const button = document.querySelector('.explore-button')
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active')
   menu.classList.toggle('active')
+  bar.classList.toggle('active')
+  text.classList.toggle('active')
+  button.classList.toggle('active')
+  document.body.classList.toggle('no-scroll')
 })
 
 document.querySelectorAll('.menu-link').forEach(link => 
