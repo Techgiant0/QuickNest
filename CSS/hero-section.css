@@ -239,10 +239,6 @@ header{
         display: none;
     }
 
-    body{
-        overflow-x: hidden;
-    }
-
     .menu-hamburger {
         width: 50px;
         height: 40px;
