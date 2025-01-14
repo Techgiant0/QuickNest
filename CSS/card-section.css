@@ -120,14 +120,14 @@
     .card-section{
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 30px;
         margin-left: 20px;
     }
 
     .card-section:nth-child(odd){
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .last{
@@ -145,12 +145,17 @@
     .card-connector{
         position: absolute;
         left: 130px; 
-        top: 257px;
-        width: 42px;
+        top: 256px;
+        width: 43px;
         transform: rotate(90deg);
         background-color: rgba(255,215,0,0.5);
         box-shadow: 0 3px 6px 0 rgba(173,175,244, 0.3), 0 3px 6px 0 rgba(173,175,244, 0.3);
         height: 30px;
+    }
+
+    .first{
+        top: 257px !important; 
+        width: 43px !important;
     }
 
     .card-connector:last-of-type{
@@ -161,8 +166,8 @@
     .card-connector-even{
         position: absolute;
         left: 130px; 
-        top: 257px;
-        width: 40px;
+        top: 256px;
+        width: 42px;
         transform: rotate(90deg);
         background-color: rgba(255,215,0,0.5);
         box-shadow: 0 3px 6px 0 rgba(173,175,244, 0.3), 0 3px 6px 0 rgba(173,175,244, 0.3);
