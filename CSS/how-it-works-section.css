@@ -60,3 +60,55 @@
     color: whitesmoke;
     cursor: pointer;
 }
+
+@media(width <= 768px){
+    .steps-section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: -12rem;
+    }
+
+    .woman-holding-phone > img{
+        width: 300px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    #text-block-section{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem; 
+        position: relative;
+        right: 2rem;
+        margin-left: -20px;
+    }
+    
+    .section2{
+        display: flex;
+        gap: 3rem;
+    }
+    
+    .section2 P{
+        width: 30%;
+        color: #00002d;
+    }
+    
+    .section2 h4{
+        color: #00002d;
+    }
+
+    .section3{
+        display: flex;
+        gap: 3rem;
+    }
+    
+    .section3 P{
+        width: 30%;
+        color: #00002d;
+    }
+    
+    .section3 h4{
+        color: #00002d;
+    }
+}
