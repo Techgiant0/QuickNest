@@ -30,4 +30,15 @@
     width: 2px;
     background-color: #000080;
     border-radius: 5px;
+    transform: rotate(90deg);
+}
+
+@media(width<=768px){
+    #key-metrics{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
