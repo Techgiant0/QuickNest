@@ -35,3 +35,13 @@
 .testimonial-card .small{
     font-size: 13px;
 }
+
+@media(width<=768px){
+    #testimonial-card-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+    }
+}
