@@ -148,3 +148,25 @@ document.querySelectorAll('.menu-link').forEach(link =>
     menu.classList.remove('active')
   })
 )
+
+const data = {};
+async function setElementStyles(el, styles) {
+  for (const [key, value] of Object.entries(styles)) {
+    el.style[key] = value;
+  }
+}
+const secondInput = document.querySelector('#subscribe input:nth-child(2)');
+const subscribeDiv = document.querySelector('#subscribe');
+if (secondInput) {
+  await setElementStyles(secondInput, {
+    boxSizing: 'border-box',
+    position: 'static',
+    left: 'auto',
+    right: 'auto',
+  });
+}
+if (subscribeDiv) {
+  await setElementStyles(subscribeDiv, {
+    flexWrap: 'wrap',
+  });
+}
