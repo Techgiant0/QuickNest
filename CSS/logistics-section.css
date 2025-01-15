@@ -72,3 +72,24 @@
     margin-right: .5rem;
     margin-bottom: -.2rem;
 }
+
+@media(width<=768px){
+    #logistics-section-card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .logistics-section-card-text-section{
+        padding-top: 1rem;
+        width: 70%;
+    }
+
+    .logistics-section-card{
+        width: 100%;
+        position: relative;
+    }
+    
+}
