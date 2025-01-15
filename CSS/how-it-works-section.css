@@ -80,8 +80,7 @@
         flex-direction: column;
         gap: 3rem; 
         position: relative;
-        right: 2rem;
-        margin-left: -20px;
+        margin-left: -180px;
     }
     
     .section2{
