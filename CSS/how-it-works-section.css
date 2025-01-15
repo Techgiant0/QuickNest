@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     margin-top: 50px;
+    overflow-x: hidden;
 }
 
 .how-it-works > h1{
