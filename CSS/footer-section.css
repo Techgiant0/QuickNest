@@ -118,3 +118,110 @@ input[type='button']:hover{
     text-align: center;
     margin-top: 3rem;
 }
+
+@media(width<=768px){
+    #links-section{
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    #footer-links-section{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem !important;
+    }
+
+    #footer-heading{
+        text-align: center;
+        color: #fffbe6;
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+
+    #first-link-section{
+        text-align: center;
+        color: #fffbe6;
+    }
+    
+    #first-link-section > p{
+        text-align: center;
+        margin-bottom: .5rem;
+        font-weight: 200;
+    }
+    
+    #first-link-section > h4{
+        margin-bottom: .5rem;
+    }
+    
+    #second-link-section{
+        text-align: center;
+        color: #fffbe6;
+    }
+    
+    #second-link-section > p{
+        text-align: center;
+        margin-bottom: .5rem;
+        font-weight: 200;
+    }
+    
+    #second-link-section > h4{
+        margin-bottom: .5rem;
+    }
+    
+    #third-link-section{
+        text-align: center;
+        color: #fffbe6;
+    }
+    
+    #third-link-section > p{
+        text-align: center;
+        margin-bottom: .5rem;
+        font-weight: 200;
+    }
+    
+    #third-link-section > h4{
+        margin-bottom: .5rem;
+    }
+    
+    #footer-links-section{
+        display: flex;
+        gap: 5rem;
+    }
+
+    #icon-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #subscribe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    
+    #email-field{
+        border: none;
+        padding: 20px;
+        outline: none;
+        width: 300px;
+        font-size: 16px;
+        border-radius: 30px;
+        margin-left: 0;
+    }
+
+    input[type='button']{
+        padding: 20px;
+        background-color: #000080;
+        color: #fffbe6;
+        border: 1px solid #fffbe6;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10rem;
+    }
+}
