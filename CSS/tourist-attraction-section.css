@@ -78,3 +78,24 @@
     color: #00002d;
     margin-bottom: .5rem;
 }
+
+@media(width<=768px){
+    #tourist-attraction-section-card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .tourist-section-card-text-section{
+        padding-top: 1rem;
+        width: 70%;
+    }
+
+    .tourist-section-card{
+        width: 100%;
+        position: relative;
+    }
+    
+}
