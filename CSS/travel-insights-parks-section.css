@@ -1,0 +1,96 @@
+#park-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0;
+    width: 100%;
+}
+
+#park-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+#park-heading h1{
+    color: #00002d;
+}
+
+#park-heading h4 {
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    color: #00002d;
+    transition: 0.3s;
+}
+
+#park-heading h4:hover {
+    color: #010188;
+}
+
+
+#park-section-card-container{
+    width: 90%;
+    display: flex;
+    gap: 5rem;
+}
+
+.park-section-card{
+    width: 25%;
+    position: relative;
+}
+
+.park-section-card img{
+    border-radius: 20px;
+    width: 300px;
+    height: 270px;
+}
+
+.park-section-card-text-section{
+    padding-top: 1rem;
+}
+
+.park-section-card-text-section h2{
+    color: #00002d;
+    padding-bottom: .5rem;
+}
+
+.park-section-card-text-section p{
+    color: #00002d;
+}
+
+.park-location-info{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.park-location-info p svg{
+    margin-right: .5rem;
+    margin-bottom: -.2rem;
+}
+
+@media(width<=768px){
+    #park-section-card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .park-section-card-text-section{
+        padding-top: 1rem;
+        width: 70%;
+    }
+
+    .park-section-card{
+        width: 100%;
+        position: relative;
+    }
+    
+}
