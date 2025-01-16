@@ -1,4 +1,4 @@
-#tourist-attraction-section{
+#museum-section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-#tourist-attraction-heading{
+#museum-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,61 +15,61 @@
     margin-bottom: 50px;
 }
 
-#tourist-attraction-heading h1{
+#museum-heading h1{
     color: #00002d;
 }
 
-#tourist-attraction-heading h4 {
+#museum-heading h4 {
     font-size: 16px;
     margin: 0;
     cursor: pointer;
     color: #00002d;
     transition: 0.3s;
-    text-decoration: none;
 }
 
-#tourist-attraction-heading h4:hover {
+#museum-heading h4:hover {
     color: #010188;
 }
 
-#tourist-attraction-section-card-container{
+
+#museum-section-card-container{
     width: 90%;
     display: flex;
     gap: 5rem;
 }
 
-.tourist-section-card{
+.museum-section-card{
     width: 25%;
     position: relative;
 }
 
-.tourist-section-card img{
+.museum-section-card img{
     border-radius: 20px;
     width: 300px;
     height: 270px;
 }
 
-.tourist-section-card-text-section{
+.museum-section-card-text-section{
     padding-top: 1rem;
 }
 
-.tourist-section-card-text-section h2{
+.museum-section-card-text-section h2{
     color: #00002d;
     padding-bottom: .5rem;
 }
 
-.tourists-section-card-text-section p{
+.museum-section-card-text-section p{
     color: #00002d;
 }
 
-.tourist-location-info{
+.museum-location-info{
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.tourist-location-info p svg{
+.museum-location-info p svg{
     margin-right: .5rem;
     margin-bottom: -.2rem;
 }
@@ -81,7 +81,7 @@
 }
 
 @media(width<=768px){
-    #tourist-attraction-section-card-container{
+    #museum-section-card-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -89,12 +89,12 @@
         gap: 5rem;
     }
 
-    .tourist-section-card-text-section{
+    .museum-section-card-text-section{
         padding-top: 1rem;
         width: 70%;
     }
 
-    .tourist-section-card{
+    .museum-section-card{
         width: 100%;
         position: relative;
     }
