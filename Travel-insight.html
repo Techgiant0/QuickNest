@@ -812,11 +812,20 @@ hamburger.addEventListener('click', () => {
 });
 
 document.querySelectorAll('#link').forEach(link => 
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        menu.classList.remove('active');
+        bar.classList.remove('active');
+        text.classList.remove('active');
+        button.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    })
+);
+document.querySelectorAll('#link').forEach(link => 
   link.addEventListener('click', () => {
     hamburger.classList.remove('active')
     menu.classList.remove('active')
   })
-)
-    </script>
+)  </script>
 </body>
 </html>
