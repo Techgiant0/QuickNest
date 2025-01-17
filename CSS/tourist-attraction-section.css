@@ -98,5 +98,13 @@
         width: 100%;
         position: relative;
     }
+
+    .straight{
+        white-space: nowrap;
+    }
+
+    #tourist-attraction-section-card-container{
+        width: 80%;
+    }
     
 }

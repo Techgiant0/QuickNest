@@ -81,6 +81,7 @@
         justify-content: center;
         align-items: center;
         gap: 5rem;
+        width: 80%;
     }
 
     .park-section-card-text-section{

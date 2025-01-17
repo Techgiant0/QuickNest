@@ -80,6 +80,7 @@
         justify-content: center;
         align-items: center;
         gap: 5rem;
+        width: 80%;
     }
 
     .logistics-section-card-text-section{

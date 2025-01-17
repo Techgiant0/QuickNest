@@ -87,6 +87,7 @@
         justify-content: center;
         align-items: center;
         gap: 5rem;
+        width: 80%;
     }
 
     .museum-section-card-text-section{
