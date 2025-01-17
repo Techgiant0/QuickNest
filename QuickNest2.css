@@ -1,0 +1,165 @@
+body {
+    font-size: 1rem; 
+}
+
+.sub-container {
+    display: flex;
+    gap: 8em;
+    padding: 2% 6%;
+}
+
+.tour {
+    width: 44%; 
+    border: 3px solid white;
+    border-radius: 15px;
+}
+.header {
+     width: 90%;
+    height: 55%;
+    margin: auto;
+    background: linear-gradient(rgba(2, 2, 124, 0.3), rgba(2, 2, 124, 0.3)), 
+    url('./QuickNest Image/background image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 150px;
+    background-color: rgba(2, 2, 124, 0.3);
+}
+@media (max-width: 767px) {
+    .header {
+        height: 40%;
+        margin-bottom: 100px;
+        background-size: contain; 
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        height: 50%;
+        margin-bottom: 120px;
+        background-size: cover; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        height: 60%;
+        margin-bottom: 150px; 
+        background-size: cover;
+    }}
+
+
+button.btn {
+    width: 10%;
+    height: 55px;
+}
+@media (min-width: 1200px) {
+    .sub-container {
+        gap: 8em; 
+    }
+    .tour {
+        width: 40%; 
+    }
+    .input input[type="email"] {
+        width: 40%; 
+    }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+    .sub-container {
+        gap: 6em; 
+    }
+    .tour {
+        width: 45%; 
+    }
+    input[type="email"] {
+        width: 50%; 
+    }
+    button.btn {
+        width: 15%; 
+    }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+    .sub-container {
+        flex-direction: column; 
+        gap: 2em; 
+        align-items: center; 
+    }
+    .tour {
+        width: 60%; 
+    }
+    input[type="email"] {
+        width: 60%; 
+    }
+    button.btn {
+        width: 20%; 
+    }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+    .sub-container {
+        flex-direction: column;
+        gap: 1em;
+        padding: 5%;
+    }
+    .tour {
+        width: 80%; 
+    }
+    input[type="email"] {
+        width: 75%; 
+    }
+    button.btn {
+        width: 25%; 
+    }
+}
+@media (max-width: 575px) and (min-width: 375px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .sub-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .tour {
+        width: 90%; 
+    }
+    input[type="email"] {
+        width: 85%; 
+    }
+    button.btn {
+        width: 30%;
+    }
+}
+@media (max-width: 374px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .sub-container {
+        flex-direction: column;
+        padding: 5%;
+        gap: 0.5em;
+    }
+    .tour {
+        width: 95%; 
+    }
+    input[type="email"] {
+        width: 90%; 
+    }
+    button.btn {
+        width: 35%; 
+    }
+}
+@media (max-width: 768px) {
+    h1, h2, h3, p {
+        font-size: smaller; 
+    }
+}
+
+
+
+
+
+
+
+
