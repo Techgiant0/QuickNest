@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 50px;
+        }
+
+        .container {
+            display: flex;
+            width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            flex: 1;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 30px;
+            background-color: #fffbe6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative; /* For positioning message boxes */
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-header h2 {
+            color: #001F3F;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .form-header p {
+            color: #001F3F;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-group input {
+            width: 80%;
+            padding: 15px 20px;
+            border: .1px solid #000080;
+            background-color: #fffbe6;
+            border-radius: 30px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .form-group input::placeholder{
+            font-size: small;
+        }
+
+        .form-group input:focus {
+            border-color: #8989f3;
+        }
+
+        .password-input-container {
+            position: relative;
+        }
+
+        .password-input-container input {
+            padding-right: 30px; /* Make space for the toggle button */
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15%;
+            top: 52%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            color: #777;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #000080;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-button {
+            background-color: #000080;
+            transition: 0.3s;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .submit-button:hover {
+            background-color: #003366;
+        }
+
+        .submit-button.disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alt-login {
+            text-align: center;
+            margin-top: 20px;
+            color: #001F3F;
+            font-size: 14px;
+        }
+
+        .alt-login a {
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .alt-login a:hover {
+            text-decoration: underline;
+        }
+
+        .social-login-buttons {
+            margin-top: 20px;
+        }
+
+        .social-login-buttons button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            color: #333;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .social-login-buttons button img {
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        /* Success and Error Message Styles */
+        .message-box {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            z-index: 10;
+        }
+
+        .success {
+            background-color: #4CAF50;
+        }
+
+        .error {
+            background-color: #f44336;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+                max-width: 500px;
+            }
+
+            .image-container {
+                order: -1;
+                flex: 1;
+            }
+
+            .image-container img {
+                content: url('./log-in Image/log in.png'); /* Update image path if needed */
+            }
+
+            .form-container {
+                padding: 20px;
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="./log-in Image/log in.png" alt="Quicknest Sign In">
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <img src="./pictures/image.png" alt="logo" height="30px">
+                <h3>Welcome back</h3>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group password-input-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">
+                        <i class="fa fa-eye" id="eye-open"></i>
+                        <i class="fa fa-eye-slash" id="eye-closed" style="display: none;"></i>
+                    </span>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="submit-button">Sign in</button>
+            </form>
+
+            <div class="alt-login">
+                Don't have an account ? <a href="#">Sign up</a>
+            </div>
+
+            <div class="social-login-buttons">
+                <button>
+                    <img src="https://img.icons8.com/color/20/000/google-logo.png" alt="Google">
+                    Sign in with Google
+                </button>
+                <button>
+                    <img src="https://img.icons8.com/color/20/000/facebook-new.png" alt="Facebook">
+                    Sign in with Facebook
+                </button>
+                <button>
+                    <img src="https://img.icons8.com/color/20/000/linkedin.png" alt="LinkedIn">
+                    Sign in with Linkedin
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const submitButton = document.querySelector('.submit-button');
+
+            // Disable button and show spinner
+            submitButton.disabled = true;
+            submitButton.classList.add('disabled');
+            submitButton.innerHTML = 'Sign in <div class="spinner"></div>';
+
+            fetch('https://backend-capstone-group-7.onrender.com/api/users/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                }),
+                mode: 'no-cors',
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                console.log('Success:', data);
+                showSuccessMessage('Sign in successful!');
+                setTimeout(() => {
+                    window.location.href = 'https://techgiant0.github.io/QuickNest/'; // Redirect after successful login
+                }, 1500);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                showErrorMessage('Sign in failed. Please check your credentials.');
+            })
+            .finally(() => {
+                // Re-enable button and remove spinner
+                submitButton.disabled = false;
+                submitButton.classList.remove('disabled');
+                submitButton.innerHTML = 'Sign in';
+            });
+        });
+
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const eyeOpen = document.getElementById('eye-open');
+            const eyeClosed = document.getElementById('eye-closed');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeOpen.style.display = 'none';
+                eyeClosed.style.display = 'inline-block';
+            } else {
+                passwordInput.type = 'password';
+                eyeOpen.style.display = 'inline-block';
+                eyeClosed.style.display = 'none';
+            }
+        }
+
+        function showSuccessMessage(message) {
+            const messageBox = document.createElement('div');
+            messageBox.classList.add('message-box', 'success');
+            messageBox.textContent = message;
+            document.querySelector('.form-container').appendChild(messageBox);
+            setTimeout(() => {
+                messageBox.remove();
+            }, 3000);
+        }
+
+        function showErrorMessage(message) {
+            const messageBox = document.createElement('div');
+            messageBox.classList.add('message-box', 'error');
+            messageBox.textContent = message;
+            document.querySelector('.form-container').appendChild(messageBox);
+            setTimeout(() => {
+                messageBox.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
