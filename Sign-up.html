@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+</head>
+<body>
+    <div class="main-container">
+        <div>
+            <img src="./QuickNest image 2/Signup.png" alt="Signup" class="img">
+        </div>
+        <div class="container">
+            <div>
+                <img src="./QuickNest image 2/logo.png" alt="logo" class="logo">
+                <h2>Sign Up for free</h2>
+            </div>
+            <form id="signupForm" class="form">
+                <div id="error-message"></div>
+                 <input type="text" placeholder="Username" name="username" id="username" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+                <div class="eye">
+                    <input type="password" placeholder="Password" name="password" required id="password">
+                    <i class="fa fa-eye-slash" id="eye-toggle"></i>
+                </div>
+                <div class="agree">
+                    <input type="checkbox" name="terms" required id="termsCheckbox">
+                    <p>By creating this account you agree to <br>terms of use and Privacy policy</p>
+                </div>
+                <button type="submit">
+                    <span class="spinner"></span>
+                    <span class="button-text">Sign Up now</span>
+                </button>
+                <p class="acct">Already have an account? <a href="#">Sign in</a></p>
+                <div class="social">
+                    <i class="fab fa-google"></i>
+                    <a href="#">Sign with Google</a>
+                </div>
+                <div class="social">
+                    <i class="fab fa-facebook"></i>
+                    <a href="www.sign-up.com">Sign with Facebook</a>
+                </div>
+                <div class="social">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="#">Sign with LinkedIn</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="sign-up.js"></script>
+</body>
+</html>
