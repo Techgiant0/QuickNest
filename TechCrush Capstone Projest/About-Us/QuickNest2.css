@@ -1,130 +1,159 @@
-body {
-    font-size: 1rem; 
-}
-
-.sub-container {
-    display: flex;
-    gap: 8em;
-    padding: 2% 6%;
-}
-
-.tour {
-    width: 44%; 
-    border: 3px solid white;
-    border-radius: 15px;
-}
-
-
-button.btn {
-    width: 10%;
-    height: 55px;
-}
 @media (min-width: 1200px) {
-    .sub-container {
+    .container {
+        gap: 15em; 
+        padding: 5% 8%;
+    }
+    .mission, .stot {
+        flex-direction: row-reverse; 
         gap: 8em; 
     }
-    .tour {
-        width: 40%; 
+    input[type="email"] {
+        width: 50%;
     }
-    .input input[type="email"] {
-        width: 40%; 
+    button.btn {
+        width: 8%;
     }
 }
-@media (max-width: 1199px) and (min-width: 992px) {
-    .sub-container {
-        gap: 6em; 
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        flex-direction: column;
+        gap: 5em; 
+        padding: 4% 6%;
+    }
+    .mission, .stot {
+        flex-direction: column;
+        align-items: center; 
     }
     .tour {
-        width: 45%; 
+        width: 80%;
     }
     input[type="email"] {
-        width: 50%; 
+        width: 60%;
     }
     button.btn {
         width: 15%; 
     }
 }
-@media (max-width: 991px) and (min-width: 768px) {
-    .sub-container {
-        flex-direction: column; 
+
+@media (max-width: 767px) {
+    .header {
+        padding-bottom: 200px; 
+    }
+    .container {
+        flex-direction: column;
         gap: 2em; 
-        align-items: center; 
+        padding: 3% 4%;
+    }
+    .mission, .stot {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em; 
     }
     .tour {
-        width: 60%; 
+        width: 90%;
     }
     input[type="email"] {
-        width: 60%; 
-    }
-    button.btn {
-        width: 20%; 
-    }
-}
-@media (max-width: 767px) and (min-width: 576px) {
-    .sub-container {
-        flex-direction: column;
-        gap: 1em;
-        padding: 5%;
-    }
-    .tour {
         width: 80%; 
     }
-    input[type="email"] {
-        width: 75%; 
-    }
     button.btn {
-        width: 25%; 
+        width: 20%;
+    }
+    #text {
+        width: 80%;
+    }
+    .fa-user {
+        font-size: large; 
+        width: 40px;
+        height: 40px;
     }
 }
-@media (max-width: 575px) and (min-width: 375px) {
-    .nav-bar {
-        flex-direction: column;
-        gap: 1em;
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header {
+        min-height: 400px;
+        padding: 15px;
     }
-    .sub-container {
+    .logo-2 {
+        max-width: 120px; 
+    }
+    h1.stay {
+        font-size: 1.5rem; 
+    }
+    p.stay {
+        font-size: 0.9rem; 
+    }
+    #text a.text {
+        font-size: 0.8rem; 
+    }
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        min-height: 300px;
+        padding: 2x;
+    }
+    .container {
         flex-direction: column;
-        gap: 1em;
+        gap: 2em; 
+        padding: 3% 4%;
+    }
+    .logo-2 {
+        max-width: 100px; 
+    }
+    .nast {
+        flex-direction: column; 
+    }
+    h1.stay {
+        font-size: 1.2rem;
+    }
+    p.stay {
+        font-size: 0.8rem;
+    }
+    #btn-1, #btn-2 {
+        width: 80px; 
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    #text {
+        gap: 0.3em; 
+    }
+    #text a.text {
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 767px) {
+    .header {
+        padding-bottom: 200px; 
+    }
+    .container {
+        flex-direction: column;
+        gap: 2em; 
+        padding: 3% 4%;
+    }
+    .mission, .stot {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em; 
     }
     .tour {
-        width: 90%; 
+        width: 90%;
     }
     input[type="email"] {
-        width: 85%; 
+        width: 80%; 
     }
     button.btn {
-        width: 30%;
+        width: 20%;
+    }
+    #text {
+        width: 80%;
+    }
+    .fa-user {
+        font-size: large; 
+        width: 40px;
+        height: 40px;
     }
 }
-@media (max-width: 374px) {
-    .nav-bar {
-        flex-direction: column;
-        gap: 0.5em;
-    }
-    .sub-container {
-        flex-direction: column;
-        padding: 5%;
-        gap: 0.5em;
-    }
-    .tour {
-        width: 95%; 
-    }
-    input[type="email"] {
-        width: 90%; 
-    }
-    button.btn {
-        width: 35%; 
-    }
-}
-@media (max-width: 768px) {
-    h1, h2, h3, p {
-        font-size: smaller; 
-    }
-}
-
-
-
-
-
-
-
-
