@@ -60,7 +60,7 @@ $(document).ready(function () {
       }),
       success: function (data) {
         alert('Signup successful!');
-        window.location.href = '/';
+        window.location.href = '/index.html';
       },
       error: function (xhr) {
         const errorMessage = xhr.responseJSON?.message || 'Signup failed';
