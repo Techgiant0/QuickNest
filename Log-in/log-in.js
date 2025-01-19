@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // Handle successful login
           console.log('Login successful:', data)
           // Redirect or handle success case here
-          // window.location.href = '/dashboard';
+          window.location.href = 'https://techgiant0.github.io/QuickNest/';
         })
         .catch(err => {
           // Show error message
