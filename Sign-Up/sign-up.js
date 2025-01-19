@@ -1,83 +1,83 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const signupForm = document.getElementById('signupForm');
-  const errorMessageDiv = document.getElementById('error-message');
-  const passwordInput = document.getElementById('password');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const eyeToggle = document.getElementById('eye-toggle');
-  const submitButton = signupForm.querySelector('button[type="submit"]');
-  const spinner = submitButton.querySelector('.spinner');
-  const buttonText = submitButton.querySelector('.button-text');
+$(document).ready(function () {
+  const $signupForm = $('#signupForm');
+  const $errorMessageDiv = $('#error-message');
+  const $passwordInput = $('#password');  
+  const $eyeToggle = $('#eye-toggle');
+  const $submitButton = $signupForm.find('button[type="submit"]');
+  const $spinner = $submitButton.find('.spinner');
+  const $buttonText = $submitButton.find('.button-text');
   const API_URL = "https://backend-capstone-group-7.onrender.com/api/users/signup";
 
   // Toggle password visibility
-  eyeToggle.addEventListener('click', () => {
-    const type = passwordInput.type === 'password' ? 'text' : 'password';
-    passwordInput.type = type;
-    eyeToggle.className = `fa fa-eye${type === 'password' ? '-slash' : ''}`;
+  $eyeToggle.on('click', function () {
+    const type = $passwordInput.attr('type') === 'password' ? 'text' : 'password';
+    $passwordInput.attr('type', type);
+    $eyeToggle.attr('class', `fa fa-eye${type === 'password' ? '-slash' : ''}`);
   });
 
   // Form submission
-  signupForm.addEventListener('submit', async (event) => {
+  $signupForm.on('submit', function (event) {
     event.preventDefault();
 
     // Extract field values
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
+    const name = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
     // Reset error message
-    errorMessageDiv.style.display = 'none';
-    errorMessageDiv.textContent = '';
+    $errorMessageDiv.hide().text('');
 
     // Show loading state
-    submitButton.disabled = true;
-    spinner.style.display = 'inline-block';
-    buttonText.textContent = 'Signing up...';
+    $submitButton.prop('disabled', true);
+    $spinner.show();
+    $buttonText.text('Signing up...');
 
-    try {
-      // Validate email format
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        throw new Error('Please enter a valid email address.');
-      }
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      $errorMessageDiv.text('Please enter a valid email address.').show();
+      resetButtonState();
+      return;
+    }
 
-      // Validate password strength
-      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-      if (!passwordRegex.test(password)) {
-        throw new Error('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.');
-      }
+    // Validate password strength
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if (!passwordRegex.test(password)) {
+      $errorMessageDiv.text('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.').show();
+      resetButtonState();
+      return;
+    }
 
-      // Submit data
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name:name,
-         email: email,
-         password: password,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
+    // Submit data using AJAX
+    $.ajax({
+      url: API_URL,
+      method: 'post',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        name: name,
+        email: email,
+        password: password,
+      }),
+      success: function (data) {
         alert('Signup successful!');
         window.location.href = '/';
-      } else {
-        throw new Error(data.message || `Signup failed with status: ${response.status}`);
+      },
+      error: function (xhr) {
+        const errorMessage = xhr.responseJSON?.message || 'Signup failed';
+        $errorMessageDiv.text(errorMessage).show();
+        console.error('Error during signup:', errorMessage);
+      },
+      complete: function () {
+        // Reset button state
+        resetButtonState();
       }
-    } catch (error) {
-      errorMessageDiv.textContent = error.message || 'An error occurred during signup.';
-      errorMessageDiv.style.display = 'block';
-      console.error('Error during signup:', error);
-    } finally {
-      // Reset button state
-      submitButton.disabled = false;
-      spinner.style.display = 'none';
-      buttonText.textContent = 'Sign Up now';
-    }
+    });
   });
+
+  // Reset button state
+  function resetButtonState() {
+    $submitButton.prop('disabled', false);
+    $spinner.hide();
+    $buttonText.text('Sign Up now');
+  }
 });
