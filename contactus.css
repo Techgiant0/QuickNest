@@ -781,6 +781,11 @@ input[type='button']{
     left: 5%;
     top: 20px;
 }
+#subscribe{
+  display: none;  
+}
+
+      
 }
 
 
